@@ -36,16 +36,33 @@ if (!process.env.VERCEL) {
 }
 
 // ── CORS ──────────────────────────────────────────────
-const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:3000')
-  .split(',')
-  .map(s => s.trim());
-
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) return callback(null, true);
-    callback(new Error(`CORS blocked: ${origin}`));
+    // Cho phép request không có origin
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    // Localhost khi dev
+    if (origin.includes('localhost')) {
+      return callback(null, true);
+    }
+
+    // Cho phép mọi domain Vercel
+    try {
+      const hostname = new URL(origin).hostname;
+
+      if (hostname.endsWith('.vercel.app')) {
+        return callback(null, true);
+      }
+    } catch (err) {
+      return callback(new Error('Invalid origin'));
+    }
+
+    // Chặn các domain khác
+    return callback(new Error(`CORS blocked: ${origin}`));
   },
+
   credentials: true,
 }));
 

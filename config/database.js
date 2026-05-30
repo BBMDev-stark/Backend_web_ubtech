@@ -26,21 +26,17 @@ const connectDB = async () => {
   }
 
   try {
-    _cache.conn = await _cache.promise;
-    console.log(`[DB] Connected: ${_cache.conn.connection.host}`);
+  _cache.conn = await _cache.promise;
 
-    mongoose.connection.on('error', (err) => {
-      console.error('[DB] Connection error:', err.message);
-      // Reset cache để lần sau tạo connection mới
-      _cache.conn = null;
-      _cache.promise = null;
-    });
+  console.log(`[DB] Connected: ${_cache.conn.connection.host}`);
+  console.log(`[DB] Name: ${mongoose.connection.name}`);
 
-    mongoose.connection.on('disconnected', () => {
-      console.warn('[DB] Disconnected from MongoDB');
-      _cache.conn = null;
-      _cache.promise = null;
-    });
+  mongoose.connection.on('error', (err) => {
+    console.error('[DB] Connection error:', err.message);
+
+    _cache.conn = null;
+    _cache.promise = null;
+  });
 
     return _cache.conn;
   } catch (error) {

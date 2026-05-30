@@ -36,9 +36,17 @@ if (!process.env.VERCEL) {
 }
 
 // ── CORS ──────────────────────────────────────────────
+// Đọc danh sách domain cho phép từ biến môi trường CLIENT_URL
+// Có thể set nhiều domain cách nhau bằng dấu phẩy, ví dụ:
+//   CLIENT_URL=https://myshop.vercel.app,https://ubtechvietnam.com
+const allowedOrigins = (process.env.CLIENT_URL || '')
+  .split(',')
+  .map(s => s.trim())
+  .filter(Boolean);
+
 app.use(cors({
   origin: (origin, callback) => {
-    // Cho phép request không có origin
+    // Cho phép request không có origin (Postman, mobile app, server-to-server)
     if (!origin) {
       return callback(null, true);
     }
@@ -48,11 +56,16 @@ app.use(cors({
       return callback(null, true);
     }
 
-    // Cho phép mọi domain Vercel
     try {
       const hostname = new URL(origin).hostname;
 
+      // Cho phép mọi subdomain *.vercel.app
       if (hostname.endsWith('.vercel.app')) {
+        return callback(null, true);
+      }
+
+      // Cho phép các domain custom được khai báo trong CLIENT_URL
+      if (allowedOrigins.includes(origin)) {
         return callback(null, true);
       }
     } catch (err) {

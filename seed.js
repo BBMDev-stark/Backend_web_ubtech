@@ -38,9 +38,9 @@ const ROBOTS = [
     basePrice: 2990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/1kbjVT3GT8MnD6KA7vJJJYsZ07l-bI1AE', isPrimary: true },
-      { url: `${COM}/2021/03/Scorebot_02.jpg` },
-      { url: `${COM}/2021/03/Scorebot_03.jpg` },
-      { url: `${COM}/2021/03/Scorebot_04.jpg` },
+      { url: `https://ubtechvietnam.edu.vn/www.ubtechvietnam.com/wp-content/uploads/2021/03/ScoreBot_07.png` },
+      { url: `https://m.media-amazon.com/images/I/71yzZ-0mLpL._AC_UF894,1000_QL80_.jpg` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/ScoreBot_09-600x250.jpg` },
     ],
     description: 'Bộ công cụ ScoreBot cung cấp đầy đủ linh kiện để bạn tự tay xây dựng, lập trình và điều khiển một robot bóng đá có khả năng bắn và ghi bàn thật sự. Được Câu lạc bộ bóng đá Manchester City xác nhận chính thức, ScoreBot không chỉ là một dự án học tập thú vị mà còn là người bạn đồng hành lý tưởng trong các trận đấu bóng đá bằng robot – hoàn toàn do bạn tạo ra!',
     stock: 30, isFeatured: true, soldCount: 85,

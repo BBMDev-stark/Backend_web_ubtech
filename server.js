@@ -113,7 +113,7 @@ if (process.env.NODE_ENV !== 'production') {
       const color = res.statusCode >= 500 ? '\x1b[31m' : res.statusCode >= 400 ? '\x1b[33m' : '\x1b[32m';
       console.log(`${color}[${res.statusCode}]\x1b[0m ${req.method} ${req.path} — ${ms}ms`);
     });
-    next();
+    next(); 
   });
 }
 

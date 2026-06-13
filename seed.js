@@ -4,7 +4,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const MONGO_URI = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://localhost:27017/ubtech_vn';
+const MONGO_URI = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb+srv://buiminh19102004_db_user:teQyAdi7BkELgSAg@cluster0.h2mkwii.mongodb.net/ubtech_vn?retryWrites=true&w=majority';
 
 // ── Load models ─────────────────────────────────────────
 const Category = require('./models/Category');
@@ -37,7 +37,7 @@ const ROBOTS = [
     name: 'SCOREBOT KIT',
     basePrice: 2990000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/1kbjVT3GT8MnD6KA7vJJJYsZ07l-bI1AE', isPrimary: true },
+      { url: 'https://ubtechvietnam.edu.vn/www.ubtechvietnam.com/wp-content/uploads/2021/03/scorebot_01.jpg', isPrimary: true },
       { url: `https://ubtechvietnam.edu.vn/www.ubtechvietnam.com/wp-content/uploads/2021/03/ScoreBot_07.png` },
       { url: `https://m.media-amazon.com/images/I/71yzZ-0mLpL._AC_UF894,1000_QL80_.jpg` },
       { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/ScoreBot_09-600x250.jpg` },
@@ -52,8 +52,8 @@ const ROBOTS = [
     basePrice: 4590000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/1hOwSthB6t45QUEgFvVuybhOlB_UvfKXk', isPrimary: true },
-      { url: `${COM}/2021/04/Unicornbot_02.jpg` },
-      { url: `${COM}/2021/04/Unicornbot_03.jpg` },
+      { url: `https://images-na.ssl-images-amazon.com/images/I/71n5mLteFdL.jpg` },
+      { url: `https://i5.walmartimages.com/asr/ee31433d-e1a4-4f93-a3d3-e86300a4b31b.3583b87ddb091c0ff9aaef89d6509c17.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF` },
     ],
     description: 'Mang thế giới thần thoại vào cuộc sống với Bộ UnicornBot trong dòng sản phẩm Series Thần thoại. Bộ kit này cho phép học sinh tự tay xây dựng và lập trình một chú kỳ lân tuyệt đẹp. Được trang bị cảm biến màu sắc và servo chuyển động mượt mà, UnicornBot có thể di chuyển, nhảy múa, tương tác và thực hiện nhiều hành động thú vị theo lập trình, khơi dậy trí tưởng tượng và đam mê công nghệ cho trẻ em.',
     stock: 25, isFeatured: true, soldCount: 62,
@@ -64,9 +64,9 @@ const ROBOTS = [
     name: 'TRACKBOT KIT',
     basePrice: 3990000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/1fTAP4QJNJx7hj5ajuTTCNRxlU9WGDxsQ', isPrimary: true },
-      { url: `${COM}/2021/04/Trackbot_02.jpg` },
-      { url: `${COM}/2021/04/Trackbot_03.jpg` },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/TrackBot_04-600x600.jpg', isPrimary: true },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/TrackBot_14-600x600.jpg` },
+      { url: `https://lh3.googleusercontent.com/d/11m7b7B1TEL0aegWofXCoJC-DlV1fpavt` },
     ],
     description: 'Bộ công cụ này cung cấp đầy đủ linh kiện để lắp ráp GrabberBot, DiggerBot hoặc sáng tạo robot JIMU theo ý tưởng riêng. Với động cơ tốc độ cao cho chuyển động mượt mà và đèn LED nhiều màu tạo cảm xúc, robot có thể biểu đạt trạng thái khác nhau theo lập trình của bạn.',
     stock: 40, soldCount: 45,
@@ -78,10 +78,9 @@ const ROBOTS = [
     basePrice: 119990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/1HVhd73x_HfF1Syl-LfDMgsSgp2fgnN_L', isPrimary: true },
-      { url: `${WEB}/2021/04/Yanshee_13.jpg` },
-      { url: `${WEB}/2021/04/Yanshee_14.jpg` },
-      { url: `${WEB}/2021/04/Yanshee_15.jpg` },
-      { url: `${WEB}/2021/04/Yanshee_17.jpg` },
+      { url: `https://www.mzxrobotics.com/img/96483/UBT-YANSHEE_altpic_5/500x500/UBT-YANSHEE.webp?time=1741863539` },
+      { url: `https://mgmaingbx7bp.s3.ap-south-1.amazonaws.com/prod_images/251101_6905fdda6e0a09.21691950.webp` },
+      { url: `https://storage.googleapis.com/bucket-two-leobotics/product/robot-educatif-humanoi%CC%88de-yanshee-ubtech-3.webp` },
     ],
     description: 'Robot Yanshee là robot giáo dục tích hợp trí tuệ nhân tạo, cảm biến, và khả năng lập trình đa dạng. Với thiết kế hình người linh hoạt, Yanshee hỗ trợ học sinh khám phá lập trình, điều khiển robot, và các ứng dụng AI trong thực tế. Đây là công cụ lý tưởng cho giáo dục STEM, khơi dậy tư duy sáng tạo và kỹ năng công nghệ cho thế hệ trẻ.',
     stock: 5, isFeatured: true, soldCount: 12,
@@ -93,11 +92,9 @@ const ROBOTS = [
     basePrice: 34990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/10dpsDljzIrY9U6TeSODxbmNMrB8OUSO-', isPrimary: true },
-      { url: `${WEB}/2021/03/Alpha_Mini_01-1.jpg` },
-      { url: `${WEB}/2021/03/Alpha_Mini_02.jpg` },
-      { url: `${WEB}/2021/03/Alpha_Mini_03.jpg` },
-      { url: `${COM}/2021/03/Alpha_Mini_08.jpg` },
-      { url: `${COM}/2021/03/Alpha_Mini_09.png` },
+      { url: `https://media.loveitopcdn.com/5371/alpha-mini-2.jpg` },
+      { url: `https://m.media-amazon.com/images/I/51ZxI2FFx8L._AC_UF350,350_QL50_.jpg` },
+      { url: `https://image.bnews.vn/MediaUpload/Org/2021/11/25/maxresdefault-20211125143035.jpg` },
     ],
     description: 'Alpha Mini là robot hình người nhỏ gọn, được trang bị trí tuệ nhân tạo và khả năng lập trình linh hoạt. Với thiết kế dễ thương và các tính năng tương tác thông minh, Alpha Mini có thể nhảy múa theo nhạc, nhận diện khuôn mặt, kể chuyện và trở thành người bạn đồng hành lý tưởng cho trẻ em và học sinh.',
     stock: 10, isFeatured: true, soldCount: 28,
@@ -109,8 +106,8 @@ const ROBOTS = [
     basePrice: 28490000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/17-nzBOR9sO5C7wtX3TQLTj0nFGD6VwQm', isPrimary: true },
-      { url: `${COM}/2021/04/UGOT_02.jpg` },
-      { url: `${COM}/2021/04/UGOT_03.jpg` },
+      { url: `https://www.mzxrobotics.com/img/96483/UBT-UGOT-AI-CG_altpic_2/500x500/UBT-UGOT-AI-CG.webp?time=1730122701` },
+      { url: `https://owebsite-cdn.ubtrobot.com/UGOT/ugot07_img02.jpg?image_process=format,webp/quality,Q_80` },
     ],
     description: 'UGOT là bộ kit robot giáo dục do UBTECH phát triển, nổi bật với thiết kế mô-đun linh hoạt, cho phép người dùng lắp ráp hơn 7 dạng robot khác nhau như ô tô tự lái, robot hình người, robot nhện và nhiều hơn nữa. Được lập trình thông qua Blockly và Python, UGOT mang lại trải nghiệm học STEM sâu sắc.',
     stock: 8, isFeatured: true, soldCount: 19,
@@ -122,8 +119,8 @@ const ROBOTS = [
     basePrice: 700000000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/1K5Tue2ITNasEiUJr2EM0HEueqvkToP9A', isPrimary: true },
-      { url: `${COM}/2021/04/Cadebot_02.jpg` },
-      { url: `${COM}/2021/04/Cadebot_03.jpg` },
+      { url: `https://www.mzxrobotics.com/img/96483/UBT-CADEBOT_altpic_1/500x500/UBT-CADEBOT.webp?time=1771515371` },
+      { url: `https://image.made-in-china.com/202f0j00gUBvebMCncoE/Cadebot-L100-Large-Screen-Efficient-Delivery-Multi-Scene-Intelligent-Open-Delivery-Robot.jpg` },
     ],
     description: 'CADEBOT L100 là robot giao hàng tự động do UBTECH phát triển, thiết kế để phục vụ trong nhiều môi trường như nhà hàng, khách sạn, siêu thị và sân bay. Với khả năng điều hướng tự động, tránh chướng ngại vật và tích hợp AI tiên tiến, CADEBOT là giải pháp tự động hóa thương mại hàng đầu.',
     stock: 2, soldCount: 3,
@@ -135,9 +132,9 @@ const ROBOTS = [
     basePrice: 693000000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FU50aqn--4P133EitfmuPFI_Gy2n7Ew', isPrimary: true },
-      { url: `${COM}/2021/03/Cruzr_02.jpg` },
-      { url: `${COM}/2021/03/Cruzr_03.jpg` },
-      { url: `${COM}/2021/03/Cruzr_04.jpg` },
+      { url: `https://saomaiedu.com/wp-content/uploads/2025/07/Robot-le-tan-CRUZR-2-510x510.webp` },
+      { url: `https://saomaiedu.com/wp-content/uploads/2025/07/Robot-le-tan-CRUZR-1-510x510.webp` },
+      { url: `https://preview.free3d.com/img/2018/02/2162666978072855979/zzzfypdh.jpg` },
     ],
     description: 'CRUZR là robot hình người tiên tiến do UBTECH phát triển, được thiết kế để nâng cao trải nghiệm khách hàng và tối ưu hóa quy trình vận hành trong các doanh nghiệp. Với khả năng tương tác tự nhiên, nhận diện giọng nói và khuôn mặt, CRUZR phù hợp cho ngân hàng, bệnh viện, trung tâm thương mại.',
     stock: 2, soldCount: 5,
@@ -148,10 +145,10 @@ const ROBOTS = [
     name: 'ADIBOT',
     basePrice: 460000000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/1DjLRnfvrdrMHryqd6-sBJ9xQc4f1uGEz', isPrimary: true },
-      { url: `${COM}/2021/03/Adibot_02.jpg` },
-      { url: `${COM}/2021/03/Adibot_03.jpg` },
-      { url: `${COM}/2021/03/Adibot_04.jpg` },
+      { url: 'https://mms.businesswire.com/media/20220104005441/en/1317723/5/ADIBOT-A_operating_room.jpg?download=1', isPrimary: true },
+      { url: `https://www.schoolspecialty.com/wcsstore/SSIB2BStorefrontAssetStore/images/cleaning-facility-supplies/2021/ADIBOT/ADIBOT-S.png` },
+      { url: `https://lh3.googleusercontent.com/d/1DjLRnfvrdrMHryqd6-sBJ9xQc4f1uGEz` },
+      { url: `https://ubtechvietnam.edu.vn/www.ubtechvietnam.com/wp-content/uploads/2021/03/Adibot_21.png` },
     ],
     description: 'ADIBOT-A: Robot tự hành hoàn toàn, được trang bị 16 đèn UV-C không tạo ozone, cảm biến LiDAR kép, camera AI, cảm biến hồng ngoại và công nghệ định vị UWB. Robot khử khuẩn tự động thế hệ mới — hoạt động không cần người giám sát, phù hợp bệnh viện, khách sạn, văn phòng lớn.',
     stock: 3, soldCount: 7,
@@ -163,11 +160,11 @@ const ROBOTS = [
     name: 'Alpha 1E',
     basePrice: 14990000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/1ZQfOilItslY3d5U_NPNvVLIqeYnMFiVO', isPrimary: true },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Alpha_1E_08.png', isPrimary: true },
       { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Alpha_1E_04.jpg' },
       { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Alpha_1E_02.jpg' },
       { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Alpha_1E_03.jpg' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Alpha_1E_08.png' },
+      { url: 'https://lh3.googleusercontent.com/d/1ZQfOilItslY3d5U_NPNvVLIqeYnMFiVO' },
     ],
     description: 'Alpha 1E là robot hình người giáo dục 16 bậc tự do, được thiết kế tối ưu cho học sinh K-12 tiếp cận STEM và lập trình. Với chiều cao 40.5 cm, kết nối WiFi và Bluetooth, Alpha 1E hỗ trợ lập trình Blockly, Python và Scratch qua ứng dụng Alpha Robot App. Đây là người bạn học tập lý tưởng trong các chương trình giáo dục robot cấp cơ sở.',
     stock: 15, isFeatured: true, soldCount: 22,
@@ -186,9 +183,9 @@ const ROBOTS = [
     name: 'Walker S1',
     basePrice: 2500000000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/1SEj7W9nXw8Axw8MUv8-z2Wk-9PhTPtpq', isPrimary: true },
-      { url: 'https://lh3.googleusercontent.com/d/1AHPKshfGisAH8dalBPe6L5_CeX7OqYf-' },
-      { url: 'https://owebsite-cdn.ubtrobot.com/resources/image/2024/10/13/600678134571077.jpg' },
+      { url: 'https://lh3.googleusercontent.com/d/1AHPKshfGisAH8dalBPe6L5_CeX7OqYf-', isPrimary: true },
+      { url: 'https://lh3.googleusercontent.com/d/1SEj7W9nXw8Axw8MUv8-z2Wk-9PhTPtpq' },
+      { url: 'https://www.robotseuropa.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/b/ubtech-walker-s2-humanoid-back.jpg' },
     ],
     description: 'Walker S1 là robot hình người công nghiệp tiên tiến với 36 bậc tự do, chiều cao 145 cm và trọng lượng 77 kg. Được trang bị AI nhận thức không gian 3D qua công nghệ U-SLAM độc quyền, Walker S1 có khả năng đi bộ, leo cầu thang, cầm nắm vật thể và thực hiện các nhiệm vụ phức tạp trên dây chuyền sản xuất EV. Là robot hình người hai chân đầu tiên hoàn thành nhiệm vụ cụ thể trên dây chuyền sản xuất ô tô điện.',
     stock: 1, soldCount: 2,
@@ -207,9 +204,8 @@ const ROBOTS = [
     name: 'Walker E',
     basePrice: 1800000000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/10iW5rVSC6C8LJSYv-nnoMycM9Nl6iLzF', isPrimary: true },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2024/06/Remove-bg.ai_1708595193451.png' },
-      { url: 'https://www.ubtrobot.com/resources/image/2024/01/walker-e-main.jpg' },
+      { url: 'https://owebsite-cdn.ubtrobot.com/resources/image/2025/07/23/700878425129029.jpg?image_process=format,webp/quality,Q_80', isPrimary: true },
+      { url: 'https://www.robotsasia.com/pub/media/catalog/product/u/b/ubtech-walker-tienkung-embodied-intelligence-5.jpg' },
     ],
     description: 'Walker E là robot hình người thế hệ mới với 36 bậc tự do, khả năng nhận diện cảm xúc và tương tác tự nhiên như người thật. Được thiết kế cho các ứng dụng dịch vụ cao cấp như tiếp tân, triển lãm, và chăm sóc khách hàng, Walker E tích hợp AI đa cảm giác tiên tiến giúp mang lại trải nghiệm tương tác độc đáo với con người.',
     stock: 1, soldCount: 1,
@@ -229,7 +225,7 @@ const KITS = [
     basePrice: 8990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-FANTASY-ZOO-2.webp` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/uKit_Fantasy_Zoo_01.jpg` },
     ],
     description: 'Khóa học này áp dụng phương pháp làm việc nhóm để giúp học viên khám phá các phương pháp xây dựng các mô hình động vật khác nhau và có được kiến thức lập trình cơ bản để mô phỏng hành vi và cách thức của các loài động vật khác nhau. Một mặt, nó giúp học sinh hiểu sự việc và giải quyết vấn đề từ nhiều chiều. Mặt khác, nó củng cố khả năng giao tiếp, diễn đạt và chia sẻ của học sinh.',
     stock: 20, isFeatured: true, soldCount: 55,
@@ -241,7 +237,7 @@ const KITS = [
     basePrice: 20990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-SMART-LIFE-2.webp` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/uKit_Smart_Life_01.jpg` },
     ],
     description: 'Khóa học giúp học viên hiểu nguyên lý và ứng dụng của các loại cảm biến thông dụng qua hoạt động nhóm và các dự án thực tế như thùng rác, khu vườn hay xe quét rác thông minh. Qua đó, học viên phát triển tư duy sáng tạo, kỹ năng hợp tác, giao tiếp và duy trì niềm đam mê với trí tuệ nhân tạo.',
     stock: 15, isFeatured: true, soldCount: 32,
@@ -253,8 +249,7 @@ const KITS = [
     basePrice: 9490000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-MAGIC-WORLD-1.webp` },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-MAGIC-WORLD-2.webp` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/uKit_Magic_World_01.jpg` },
     ],
     description: 'Khóa học giúp sinh viên làm quen với uCode để thiết kế hoạt hình, trò chơi và lập trình phần cứng thông minh. Qua quá trình viết mã và tương tác với cảm biến, học viên phát triển tư duy thuật toán, kỹ năng thực hành, khả năng sáng tạo và giải quyết vấn đề, từ đó nâng cao hứng thú với trí tuệ nhân tạo.',
     stock: 18, soldCount: 28,
@@ -266,7 +261,7 @@ const KITS = [
     basePrice: 28990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-TRANSFORMER-WORKSHOP-2.webp` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/uKit_Transformer_Workshop_01.jpg` },
     ],
     description: 'Khóa học giúp học sinh khám phá hiện tượng thực tế qua việc xây dựng mô hình như bảng quảng cáo chuyển đổi, robot tấn công, hay hệ thống cảnh báo. Bằng cách sử dụng các cảm biến và linh kiện điện tử, học sinh hiện thực hóa ý tưởng thành mô hình thực tế, phát triển tư duy đổi mới, kỹ năng giải quyết vấn đề và khả năng lập trình ứng dụng vào cuộc sống.',
     stock: 10, isFeatured: true, soldCount: 18,
@@ -278,9 +273,7 @@ const KITS = [
     basePrice: 9990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-Super-Assistant-2.webp` },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-Super-Assistant-1-1.webp` },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-Super-Assistant-2.webp` },
+      { url: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzEn2W-6YwWvh4c8rKX_Bq6xSIXs8Zvf4vNw&s` },
     ],
     description: 'Khóa học sử dụng robot hình người Alpha Mini kết hợp lập trình đồ họa và phần cứng nguồn mở, giúp học sinh tiểu học tiếp cận kiến thức STEM theo phương pháp dự án sáng tạo. Học sinh phát triển tư duy logic, kỹ năng lập trình và khả năng giải quyết vấn đề thực tế.',
     stock: 12, soldCount: 22,
@@ -292,7 +285,7 @@ const KITS = [
     basePrice: 25990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-Super-Engineer-2.webp` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/uKit_Super_Engineer_01.jpg` },
     ],
     description: 'Khóa học giúp học sinh phát triển AI một cách chủ động thông qua nghiên cứu khoa học và các dự án thực tế trong lĩnh vực nông nghiệp, công nghiệp và robot. Qua đó, học sinh vận dụng kiến thức AI vào cuộc sống, nâng cao tư duy phản biện và kỹ năng thiết kế kỹ thuật.',
     stock: 8, isFeatured: true, soldCount: 15,
@@ -304,9 +297,9 @@ const KITS = [
     name: 'COURTBOT KIT',
     basePrice: 3590000,
     images: [
-      { url: 'https://lh3.googleusercontent.com/d/1GjW_zAWyPNv2S9lgQPOeanmXYGUqLASd', isPrimary: true },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Courtbot_01.jpg' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/03/Courtbot_02.jpg' },
+      { url: 'https://ubtechvietnam.edu.vn/www.ubtechvietnam.com/wp-content/uploads/2021/03/CourtBot_03.jpg', isPrimary: true },
+      { url: 'https://lh3.googleusercontent.com/d/1GjW_zAWyPNv2S9lgQPOeanmXYGUqLASd' },
+      { url: 'https://ubtechvietnam.edu.vn/www.ubtechvietnam.com/wp-content/uploads/2021/03/CourtBot_08.png' },
     ],
     description: 'COURTBOT KIT cho phép học sinh tự tay lắp ráp và lập trình một robot bóng rổ thực thụ. Bộ kit tích hợp hơn 200 linh kiện, kết hợp kiến thức vật lý, toán học và lập trình thông qua trò chơi thể thao. Học sinh điều khiển robot qua ứng dụng JIMU App với lập trình Blockly, phát triển tư duy kỹ thuật và kỹ năng giải quyết vấn đề sáng tạo.',
     stock: 35, isFeatured: true, soldCount: 47,
@@ -346,7 +339,7 @@ const KITS = [
     basePrice: 22990000,
     images: [
       { url: 'https://lh3.googleusercontent.com/d/12FekyybqvXMnb1dnFhjKNFG06H_cOYNf', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-SUPER-DESIGNER-2.webp` },
+      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/uKit_Super_Engineer_01.jpg` },
     ],
     description: 'Khóa học AI Super Designer đặt học sinh vào vai kỹ sư AI, thiết kế các hệ thống thông minh ứng dụng trong nông nghiệp và công nghiệp. Thông qua các dự án thực tế, học sinh phát triển kỹ năng thiết kế hệ thống AI, lập trình nâng cao và tư duy kỹ thuật. Phù hợp cho học sinh K8-K10 với nền tảng lập trình cơ bản.',
     stock: 10, soldCount: 12,
@@ -369,10 +362,7 @@ const BOOKS = [
     name: 'AI FANTASY ZOO 1',
     basePrice: 210000,
     images: [
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-FANTASY-ZOO-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-FANTASY-ZOO-2.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Fantasy_Zoo_06.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Fantasy_Zoo_05.png' },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Fantasy_Zoo_06.png', isPrimary: true },
     ],
     description: 'Sách giáo trình AI Fantasy Zoo Tập 1 giúp học viên làm việc nhóm để xây dựng mô hình và lập trình mô phỏng hành vi động vật, qua đó phát triển tư duy đa chiều, kỹ năng giải quyết vấn đề, giao tiếp và chia sẻ.',
     stock: 200, soldCount: 320,
@@ -383,10 +373,7 @@ const BOOKS = [
     name: 'AI FANTASY ZOO 2',
     basePrice: 210000,
     images: [
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-FANTASY-ZOO-2.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-FANTASY-ZOO-1.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Fantasy_Zoo_05.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Fantasy_Zoo_06.png' },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Fantasy_Zoo_05.png', isPrimary: true },
     ],
     description: 'Sách giáo trình AI Fantasy Zoo Tập 2 tiếp tục hành trình khám phá thế giới động vật qua lập trình AI. Học viên nâng cao kỹ năng và xây dựng các mô hình phức tạp hơn.',
     stock: 200, soldCount: 290,
@@ -397,10 +384,7 @@ const BOOKS = [
     name: 'AI SMART LIFE 1',
     basePrice: 210000,
     images: [
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-SMART-LIFE-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-SMART-LIFE-2.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Smart_Life_06.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Smart_Life_05.png' },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Smart_Life_06-600x769.png', isPrimary: true },
     ],
     description: 'Sách giáo trình AI Smart Life Tập 1 giúp học viên hiểu nguyên lý và ứng dụng của các loại cảm biến thông dụng thông qua làm việc nhóm và thực hiện các dự án như thùng rác, khu vườn, xe quét rác thông minh.',
     stock: 180, soldCount: 270,
@@ -411,10 +395,7 @@ const BOOKS = [
     name: 'AI SMART LIFE 2',
     basePrice: 210000,
     images: [
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-SMART-LIFE-2-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-SMART-LIFE-1.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Smart_Life_05.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Smart_Life_06.png' },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Smart_Life_05-600x769.png', isPrimary: true },
     ],
     description: 'Sách giáo trình AI Smart Life Tập 2 nâng cao kiến thức về cảm biến và IoT. Học viên thực hiện các dự án thực tế phức tạp hơn, ứng dụng AI vào đời sống.',
     stock: 180, soldCount: 240,
@@ -425,10 +406,7 @@ const BOOKS = [
     name: 'SÁCH AI MAGIC WORLD',
     basePrice: 210000,
     images: [
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-MAGIC-WORLD-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-MAGIC-WORLD-2.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Magic_World_05.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Magic_World_06.png' },
+      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-MAGIC-WORLD-1-1.webp', isPrimary: true },
     ],
     description: 'Sách giáo trình AI Magic World giúp học sinh phát triển AI một cách độc lập thông qua nghiên cứu khoa học và các dự án thực tế trong nông nghiệp, công nghiệp, robot.',
     stock: 160, soldCount: 215,
@@ -440,9 +418,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-TRANSFORMER-WORKSHOP-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-TRANSFORMER-WORKSHOP-2.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Transformer_Workshop_06.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Transformer_Workshop_05.png' },
     ],
     description: 'Học sinh phát triển AI độc lập thông qua nghiên cứu khoa học và các dự án thực tế trong nông nghiệp, công nghiệp và robot. Qua đó, các em hiểu nguyên lý hoạt động của cảm biến và ứng dụng trong cuộc sống.',
     stock: 150, soldCount: 198,
@@ -454,9 +429,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-TRANSFORMER-WORKSHOP-2.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-TRANSFORMER-WORKSHOP-1.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Transformer_Workshop_05.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Transformer_Workshop_06.png' },
     ],
     description: 'Tiếp tục chương trình AI Transformer Workshop, học sinh nâng cao kỹ năng lập trình và điện tử. Xây dựng các hệ thống thông minh phức tạp hơn và ứng dụng AI vào thực tiễn.',
     stock: 150, soldCount: 172,
@@ -468,9 +440,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-Super-Assistant-1-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-Super-Assistant-2.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Assistant_06.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Assistant_05.png' },
     ],
     description: 'Khóa học sử dụng robot hình người Alpha Mini kết hợp lập trình đồ họa và phần cứng nguồn mở, giúp học sinh tiểu học tiếp cận kiến thức STEM thông qua phương pháp dự án sáng tạo.',
     stock: 120, soldCount: 155,
@@ -482,9 +451,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-Super-Assistan-2-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-Super-Assistant-1-1.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Assistant_05.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Assistant_06.png' },
     ],
     description: 'Tiếp tục chương trình AI Super Assistant, học sinh nâng cao kỹ năng lập trình với Alpha Mini và thực hiện các dự án STEM phức tạp hơn.',
     stock: 120, soldCount: 138,
@@ -496,9 +462,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-SUPER-DESIGNER-1.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-SUPER-DESIGNER-2.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Designer_05.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Designer_04.png' },
     ],
     description: 'Học sinh chủ động khám phá và phát triển AI thông qua các dự án thực tế trong nông nghiệp và công nghiệp, đóng vai kỹ sư để tìm hiểu nguyên lý hoạt động của các hệ thống thông minh.',
     stock: 100, soldCount: 120,
@@ -510,9 +473,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-SUPER-DESIGNER-2.webp', isPrimary: true },
-      { url: `https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/AI-SUPER-DESIGNER-1.webp` },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Designer_04.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Super_Designer_05.png' },
     ],
     description: 'Tiếp tục hành trình khám phá AI với vai trò kỹ sư. Học sinh nâng cao kỹ năng thiết kế hệ thống thông minh và ứng dụng AI trong các ngành công nghiệp.',
     stock: 100, soldCount: 105,
@@ -524,7 +484,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-SuperEngineer-1.webp', isPrimary: true },
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-Super-Engineer-2.webp' },
     ],
     description: 'Sách giáo trình AI Super Engineer Tập 1 giúp học sinh phát triển AI một cách chủ động thông qua nghiên cứu khoa học và các dự án thực tế trong nông nghiệp, công nghiệp và robot.',
     stock: 110, soldCount: 145,
@@ -536,7 +495,6 @@ const BOOKS = [
     basePrice: 210000,
     images: [
       { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-Super-Engineer-2.webp', isPrimary: true },
-      { url: 'https://s4h.edu.vn/wp-content/uploads/2024/01/AI-SuperEngineer-1.webp' },
     ],
     description: 'Sách giáo trình AI Super Engineer Tập 2 tiếp tục nâng cao kỹ năng thiết kế và lập trình AI. Học sinh thực hiện các dự án phức tạp hơn và ứng dụng AI trong nhiều lĩnh vực.',
     stock: 110, soldCount: 130,
@@ -547,10 +505,7 @@ const BOOKS = [
     name: 'AI APPLICATION & EXPLORATION 1',
     basePrice: 210000,
     images: [
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/THE-APPLICATION-AND-EXPLORATION-OF-AI-1.webp', isPrimary: true },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/THE-APPLICATION-AND-EXPLORATION-OF-AI-2.webp' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Application_Exploration_01.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Application_Exploration_02.png' },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_AppExploration_05.png', isPrimary: true },
     ],
     description: 'Khóa học giúp học sinh hiểu nguyên lý và ứng dụng thực tế của AI trong đời sống, từ đó mở rộng tư duy, tầm nhìn và định hướng nhận thức đúng đắn về vai trò của AI trong xã hội hiện đại.',
     stock: 90, soldCount: 88,
@@ -561,10 +516,7 @@ const BOOKS = [
     name: 'AI APPLICATION & EXPLORATION 2',
     basePrice: 210000,
     images: [
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/THE-APPLICATION-AND-EXPLORATION-OF-AI-2.webp', isPrimary: true },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2022/08/THE-APPLICATION-AND-EXPLORATION-OF-AI-1.webp' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Application_Exploration_02.png' },
-      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_Application_Exploration_01.png' },
+      { url: 'https://ubtechvietnam.edu.vn/wp-content/uploads/2021/04/Book_AppExploration_04-600x769.png', isPrimary: true },
     ],
     description: 'Tiếp tục chương trình AI Application & Exploration, học sinh nâng cao hiểu biết về ứng dụng AI trong các lĩnh vực như y tế, giáo dục, kinh doanh và đưa ra những phân tích sâu sắc.',
     stock: 90, soldCount: 75,
